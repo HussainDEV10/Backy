@@ -1,0 +1,95 @@
+body {
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #6200ea;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+#search-form {
+    margin-top: 10px;
+}
+
+#search-form input {
+    padding: 10px;
+    font-size: 1em;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#search-form button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    background-color: #ff9800;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+main {
+    padding: 20px;
+}
+
+#upload-section, #backgrounds-gallery {
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#upload-section h2, #backgrounds-gallery h2 {
+    margin-bottom: 10px;
+}
+
+#upload-form input, #upload-form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#upload-form button {
+    background-color: #6200ea;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.background-item {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+}
+
+.background-item img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.background-item p {
+    margin: 5px 0 0;
+    font-size: 1em;
+}

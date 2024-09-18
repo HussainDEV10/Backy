@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع الخلفيات</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>موقع الخلفيات</h1>
+        <form id="search-form">
+            <input type="text" placeholder="ابحث عن الخلفيات...">
+            <button type="submit">بحث</button>
+        </form>
+    </header>
+
+    <main>
+        <section id="upload-section">
+            <h2>ارفع خلفية جديدة</h2>
+            <form id="upload-form">
+                <input type="file" id="background-file" accept="image/*">
+                <input type="text" id="background-title" placeholder="اسم الخلفية">
+                <button type="button" onclick="uploadBackground()">رفع</button>
+            </form>
+        </section>
+
+        <section id="backgrounds-gallery">
+            <h2>الخلفيات المتاحة</h2>
+            <div id="backgrounds-list">
+                <!-- الخلفيات ستظهر هنا -->
+            </div>
+        </section>
+    </main>
+
+    <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-firestore.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
