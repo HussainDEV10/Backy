@@ -9,7 +9,6 @@ const firebaseConfig = {
   measurementId: "G-YP8852THBW"
 };
 
-
 // تهيئة Firebase
 const app = firebase.initializeApp(firebaseConfig);
 const storage = firebase.storage();
@@ -28,10 +27,10 @@ function uploadBackground() {
 
         uploadTask.on('state_changed', 
             (snapshot) => {
-                // تقدم التحميل
+                // تقدم التحميل (يمكنك إضافة مؤشر تقدم هنا)
             }, 
             (error) => {
-                console.error('خطأ أثناء رفع الملف:', error);
+                alert('خطأ أثناء رفع الملف: ' + error.message);
             }, 
             () => {
                 // عند اكتمال التحميل
@@ -43,7 +42,7 @@ function uploadBackground() {
                         alert('تم رفع الخلفية بنجاح!');
                         displayBackgrounds();
                     }).catch((error) => {
-                        console.error('خطأ أثناء حفظ البيانات:', error);
+                        alert('خطأ أثناء حفظ البيانات: ' + error.message);
                     });
                 });
             }
