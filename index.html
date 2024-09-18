@@ -3,19 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>رفع الصور إلى Firebase</title>
-    <link rel="stylesheet" href="styles.css"> <!-- إضافة ملف CSS -->
+    <title>نشر صورة</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>رفع صورة</h1>
-        <input type="file" id="imageUpload" accept="image/*">
-        <button onclick="uploadImage()">رفع الصورة</button>
-        <div id="uploadStatus"></div>
-    </div>
-
-    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-storage.js"></script>
+    <h1>انشر صورتك</h1>
+    <form id="uploadForm">
+        <input type="file" id="imageInput" accept="image/*" required>
+        <input type="text" id="titleInput" placeholder="اكتب عنوان الصورة" required>
+        <button type="submit">نشر</button>
+    </form>
+    <div id="postsContainer"></div>
     <script src="script.js"></script>
 </body>
-</html>
+                                 </html>
