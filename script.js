@@ -1,4 +1,3 @@
-// إعداد Firebase
 const firebaseConfig = {
   apiKey: "AIzaSyBXXCR2jN8SOP_AamRaE0vkEliR_cnpLqY",
   authDomain: "backy-123.firebaseapp.com",
@@ -8,6 +7,7 @@ const firebaseConfig = {
   appId: "1:763792380953:web:74e509e70ca36b94f80688",
   measurementId: "G-YP8852THBW"
 };
+
 
 // تهيئة Firebase
 const app = firebase.initializeApp(firebaseConfig);
@@ -42,8 +42,10 @@ function uploadBackground() {
                         alert('تم رفع الخلفية بنجاح!');
                         displayBackgrounds();
                     }).catch((error) => {
-                        alert('خطأ أثناء حفظ البيانات: ' + error.message);
+                        alert('خطأ أثناء حفظ البيانات في Firestore: ' + error.message);
                     });
+                }).catch((error) => {
+                    alert('خطأ أثناء الحصول على رابط التحميل: ' + error.message);
                 });
             }
         );
@@ -74,6 +76,8 @@ function displayBackgrounds() {
             backgroundItem.appendChild(title);
             backgroundsList.appendChild(backgroundItem);
         });
+    }).catch((error) => {
+        alert('خطأ أثناء عرض الخلفيات: ' + error.message);
     });
 }
 
