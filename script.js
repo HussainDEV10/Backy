@@ -1,4 +1,5 @@
 document.getElementById('uploadForm').addEventListener('submit', function (e) {
+    // منع السلوك الافتراضي للنموذج
     e.preventDefault();
 
     const imageInput = document.getElementById('imageInput');
@@ -21,7 +22,7 @@ document.getElementById('uploadForm').addEventListener('submit', function (e) {
 
             postsContainer.appendChild(postDiv);
 
-            // Reset form
+            // إعادة تعيين النموذج
             imageInput.value = '';
             titleInput.value = '';
         };
